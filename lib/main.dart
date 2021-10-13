@@ -55,22 +55,17 @@ class Books extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.cyan,
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Row(
-            children: [Text('Die erste Seite')],
-          ),
-          Row(
-            children: [
-              OutlinedButton(
-                child: Text('Gehen sie bitte Personen'),
-                onLongPress: () {
+          Text('Die erste Seite'),
+          OutlinedButton(
+            child: Text('Gehen sie bitte Personen'),
+            onLongPress: () {
 
-                }, onPressed: () { Route route = MaterialPageRoute(
-                builder: (context) => Personen(),
-              );
-              Navigator.push(context, route); },
-              )
-            ],
+            }, onPressed: () { Route route = MaterialPageRoute(
+            builder: (context) => Personen(),
+          );
+          Navigator.push(context, route); },
           )
         ],
       ),
@@ -84,23 +79,17 @@ class Personen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: Column( mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Row(
-            children: [Text('Die zweite Seite')],
-          ),
-          Row(
-            children: [
-              GestureDetector(
-                child: Text('Gehen sie bitte Schulern'),
-                onLongPress: () {
-                  Route route = MaterialPageRoute(
-                    builder: (context) => Schulern(),
-                  );
-                  Navigator.push(context, route);
-                },
-              )
-            ],
+          Text('Die zweite Seite'),
+          OutlinedButton(
+            child: Text('Gehen sie bitte Schulern'),
+            onLongPress: () {
+
+            }, onPressed: () {  Route route = MaterialPageRoute(
+            builder: (context) => Schulern(),
+          );
+          Navigator.push(context, route); },
           )
         ],
       ),
@@ -114,23 +103,17 @@ class Schulern extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: Column( mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Row(
-            children: [Text('Die dritte Seite')],
-          ),
-          Row(
-            children: [
-              OutlinedButton(
-                child: Text('Gehen sie bitte Personen'),
-                onLongPress: () {
-                  Route route = MaterialPageRoute(
-                    builder: (context) => Personen(),
-                  );
-                  Navigator.push(context, route);
-                }, onPressed: () {  },
-              )
-            ],
+          Text('Die dritte Seite'),
+          OutlinedButton(
+            child: Text('Gehen sie bitte Personen'),
+            onLongPress: () {
+
+            }, onPressed: () { Route route = MaterialPageRoute(
+            builder: (context) => Personen(),
+          );
+          Navigator.push(context, route); },
           )
         ],
       ),
