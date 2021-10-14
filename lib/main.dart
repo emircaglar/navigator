@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'büchern.dart';
 
 void main() {
   runApp(Navigator1());
@@ -36,7 +37,7 @@ class Home extends StatelessWidget {
               onLongPress: () {
 
               }, onPressed: () {Route route = MaterialPageRoute(
-              builder: (context) => Books(),
+              builder: (context) => Buchern(),
             );
             Navigator.push(context, route);  },
             )
@@ -47,76 +48,5 @@ class Home extends StatelessWidget {
   }
 }
 
-class Books extends StatelessWidget {
-  const Books({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.cyan,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text('Die erste Seite'),
-          OutlinedButton(
-            child: Text('Gehen sie bitte Personen'),
-            onLongPress: () {
 
-            }, onPressed: () { Route route = MaterialPageRoute(
-            builder: (context) => Personen(),
-          );
-          Navigator.push(context, route); },
-          )
-        ],
-      ),
-    );
-  }
-}
-
-class Personen extends StatelessWidget {
-  const Personen({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column( mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text('Die zweite Seite'),
-          OutlinedButton(
-            child: Text('Gehen sie bitte Schulern'),
-            onLongPress: () {
-
-            }, onPressed: () {  Route route = MaterialPageRoute(
-            builder: (context) => Schulern(),
-          );
-          Navigator.push(context, route); },
-          )
-        ],
-      ),
-    );
-  }
-}
-
-class Schulern extends StatelessWidget {
-  const Schulern({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column( mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text('Die dritte Seite'),
-          OutlinedButton(
-            child: Text('Gehen sie bitte Personen'),
-            onLongPress: () {
-
-            }, onPressed: () { Route route = MaterialPageRoute(
-            builder: (context) => Personen(),
-          );
-          Navigator.push(context, route); },
-          )
-        ],
-      ),
-    );
-  }
-}
